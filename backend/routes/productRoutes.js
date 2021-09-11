@@ -1,6 +1,5 @@
 import express from "express";
-import asyncHandler from "express-async-handler";
-import Product from "../models/productModel.js";
+
 import {
   getProducts,
   getProductById,
@@ -8,7 +7,6 @@ import {
 
 const router = express.Router();
 
-//
 router.route("/").get(getProducts);
 router.route("/:id").get(getProductById);
 
